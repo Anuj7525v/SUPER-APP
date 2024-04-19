@@ -1,70 +1,28 @@
 import React, { useState, useEffect } from "react";
 import actionBG from "../../assets/image 2.png";
 import styles from "./GenrePage.module.css";
+import { colors } from "../../assets/data/colors.js";
+import { genres } from "../../assets/data/genres.js";
 import { IoIosWarning } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 function GenrePage() {
-    const [genres, setGenres] = useState([
-        {
-            title: "Action",
-            bgImage: actionBG,
-        },
-        {
-            title: "Drama",
-            bgImage: actionBG,
-        },
-        {
-            title: "Romance",
-            bgImage: actionBG,
-        },
-        {
-            title: "Thriller",
-            bgImage: actionBG,
-        },
-        {
-            title: "Western",
-            bgImage: actionBG,
-        },
-        {
-            title: "Horror",
-            bgImage: actionBG,
-        },
-        {
-            title: "Fantasy",
-            bgImage: actionBG,
-        },
-        {
-            title: "Music",
-            bgImage: actionBG,
-        },
-        {
-            title: "Fiction",
-            bgImage: actionBG,
-        },
-    ]);
+
     const [selectedGenres, setSelectedGenres] = useState([]); // set methods are ALWAYS asynchronous
     const [person, setperson] = useState({ name: "John", age: 25 });
     const [lengthWarning, setLengthWarning] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (selectedGenres.length >= 3) {
             setLengthWarning(false);
         }
+        localStorage.setItem("selectedGenres",JSON.stringify(selectedGenres));
+        console.log(localStorage.getItem("selectedGenres"));
 
     }, [selectedGenres]);
 
-    const bgColors = [
-        "#11B800",
-        "#D7A4FF",
-        "#11B800",
-        "#84C2FF",
-        "#902500",
-        "#7358FF",
-        "#FF4ADE",
-        "#E61E32",
-        "#6CD061",
-    ];
-    const bgColorsCSS = ["color1", "color2"];
+
 
     const removeGenre = (index) => {
         console.log(index); // 3
@@ -73,8 +31,13 @@ function GenrePage() {
     };
 
     const selectGenre = (index) => {
-        if (selectedGenres.includes(index)) return;
-        setSelectedGenres((prev) => [...prev, index]);
+        if (selectedGenres.includes(index)) {
+            setSelectedGenres((prev) => prev.filter((item) => item !== index));
+        }
+        else {
+            setSelectedGenres((prev) => [...prev, index]);
+        }
+
     };
 
     const handleNext = () => {
@@ -117,14 +80,18 @@ function GenrePage() {
                             key={index}
                             className={styles.genreCard}
                             onClick={() => selectGenre(index)}
-                            style={{ backgroundColor: bgColors[index] }}
+                            style={{
+                                backgroundColor: colors[index],
+                                outline: selectedGenres.includes(index)
+                                    ? "4px solid green" : "",
+                            }}
                         >
                             <div className={styles.title}> {genre.title}</div>
                             <img src={genre.bgImage} alt="background" />
                         </div>
                     ))}
                 </div>
-                <button className={styles.button} onClick={handleNext}>
+                <button className={styles.Nextbutton} onClick={handleNext}>
                     Next Page
                 </button>
             </div>
