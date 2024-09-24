@@ -1,5 +1,8 @@
+
 .notesWidget {
     padding: 15px;
+   overflow: hidden;
+    
 }
 
 .header {
@@ -15,7 +18,7 @@
     height: 300px;
     width: 100%;
     resize: none;
-    /* overflow-y: scroll; */
+    
 }
 
 .input:focus {

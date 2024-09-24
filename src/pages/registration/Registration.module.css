@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Single+Day&display=swap');
 
-.page{
+.page {
     font-family: "DM Sans", sans-serif;
     display: flex;
     color: white;
@@ -9,16 +9,23 @@
     height: 100vh;
     width: 100vw;
 }
-.left{
-    width: 50%;
+
+.left {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     position: relative;
-
-
+    width: 50%;
+    height: 100vh;
 }
-.leftHeader{
+
+
+.bgImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.leftHeader {
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -27,74 +34,67 @@
 }
 
 
-.bgImage{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-
+h2 {
+    font-size: 3.5rem;
+    font-family: "Single Day", cursive;
+    color: #72DB73;
 }
-.right{
+
+.right {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
 }
-h2{
-    font-size: 3rem;
-    color: #72DB73;
-    font-family: "single Day", cursive;
-}
-span{
-    color: #72DB73;
-}
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 40%;
-   
-}
-input [type ="text"],
-[type ="text"],
-[type ="Email"],
-[type ="tel"]{
-    all:unset;
+
+
+.input {
+    all: unset;
+    padding: 10px;
+    margin: 0% 25%;
     width: 50%;
+    border-radius: 3px;
     color: #7C7C7C;
     background-color: #292929;
-    padding:  10px;
-    margin: 0px 25%;
-    border-radius: 3px;
-    
 }
-.checkbox{
-    margin-left: 13.5%;
-}
+
 .label {
     font-size: small;
     margin: 0% 25%;
     color: red;
 }
-button{
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40%;
+}
+
+
+
+.checkbox {
+    margin-left: 13.5%;
+}
+
+.submit {
     all: unset;
-    border-radius: 20px;
     padding: 10px;
     margin: 0% 25%;
     width: 50%;
+    border-radius: 20px;
+    color: #FFFFFF;
     background-color: #72DB73;
     text-align: center;
-    color: #FFFFFF;
-
 }
+
 label {
     color: #7C7C7C;
 }
 
 p {
-
     margin: 0px 25%;
 }
 

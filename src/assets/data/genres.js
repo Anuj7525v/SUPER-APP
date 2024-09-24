@@ -1,14 +1,12 @@
-import action from "../../assets/image 2.png";
-import drama from "../../assets/image 2.png";
-import fantasy from "../../assets/image 2.png";
-import fiction from "../../assets/image 2.png";
-import horror from "../../assets/image 2.png";
-import music from "../../assets/image 2.png";
-import romance from "../../assets/image 2.png";
-import thriller from "../../assets/image 2.png";
-import Western from "../../assets/image 2.png";
-
-
+import action from "../../assets/action.png";
+import drama from "../../assets/drama.png";
+import fantasy from "../../assets/fantasy.png";
+import fiction from "../../assets/fiction.png";
+import horror from "../../assets/horror.png";
+import music from "../../assets/music.png";
+import romance from "../../assets/romance.png";
+import thriller from "../../assets/thriller.png";
+import Western from "../../assets/western.png";
 
 export const genres = [
     {

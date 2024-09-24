@@ -3,7 +3,7 @@
   background-color: black;
   height: 100vh;
   width: 100vw;
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .left {
@@ -15,78 +15,6 @@
   height: 100%;
 }
 
-.userWidget {
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-around;
-  margin-bottom: 1.5%;
-  padding: 3%;
-  height: 65%;
-  color: white;
-  background-color: #5746ea;
-  border-radius: 30px;
-
-  display: flex;
-  box-sizing: border-box;
-  margin-bottom: 1.5%;
-  padding: 3%;
-  height: 65%;
-  color: white;
-  background-color: #5746ea;
-  border-radius: 30px;
-}
-
-.userWidget h3 {
-  margin: 0px;
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-.userWidget h1 {
-  margin-top: 10px;
-  font-weight: 500;
-  font-size: 3.5rem;
-}
-
-.genreGrid {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.pill {
-  width: 20%;
-  flex: 0 0 calc(50% - 60px);
-  border-radius: 20px;
-  background-color: #9f94ff;
-  padding: 10px 20px;
-  margin: 10px;
-}
-
-.weatherWidget {
-  box-sizing: border-box;
-  /* margin-top: 1.5%; */
-  height: 100%;
-  width: 100%;
-  background-color: #101744;
-  color: white;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.weatherWidget .header {
-  height: 35%;
-  background-color: #ff4ade;
-}
-
-.weatherWidget h1 {
-  margin: 0px;
-}
-
-.weatherWidget .footer {
-  width: inherit;
-  display: flex;
-  justify-content: space-evenly;
-}
 .right {
   width: 35%;
   height: 100%;
@@ -96,36 +24,19 @@
   padding: 4% 10% 4% 2.5%;
 }
 
-.newsWidget {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border-radius: 30px;
-  overflow: hidden;
-}
-
-.newsWidget .header {
-  position: relative;
-  width: 100%;
-  border: none;
-}
-
-.headerText {
-  margin: 0px;
-  padding: 0px 10px;
-  width: 100%;
-  position: absolute;
-  bottom: 4px;
+.nextButton {
+ padding: 10px 55px;
+ font-size: 16px;
+  background-color:  #148a08;
   color: white;
-  background-color: rgba(6, 0, 0, 0.5);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: flex-end; /* Align button to the right */
+  position: absolute;
+    bottom: 2rem;
+    right: 2rem;
 }
-
-.newsWidget img {
-  /* border-radius: 30px 30px 0px 0px; */
-  width: inherit;
-  max-height: 50%;
-}
-
-.newsWidget .footer {
-  padding: 20px 25px;
+.nextButton:hover {
+  background-color: #229216;
 }
